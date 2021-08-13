@@ -1,0 +1,21 @@
+.HomeMain{
+    $bgcolor:#f9f5ea !global;
+    $lightblue:#d7edf2 !global;
+    $blue:#88a4ca !global;
+    $darkblue:#5c7eac !global;
+    $pink:#eb6366 !global;
+    $fontcolor:#291c16 !global;
+    $aroundpadding: 12px 24px !global;
+    $sidepadding: 12px !global;
+    $title:24px !global;
+    $font:16px !global;
+
+    text-align: center;
+    color:$fontcolor;
+    font-size:30px;
+    margin-top: 150px;
+    img{
+        width:250px;
+        height: 300px;
+    }
+}

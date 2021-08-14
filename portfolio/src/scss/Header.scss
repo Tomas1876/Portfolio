@@ -21,7 +21,7 @@ nav{
     position:sticky;
     top:0;
     color:$bgcolor;
-
+    
     img{
         width: 40px;
         height:40px;
@@ -33,7 +33,7 @@ nav{
     }
 
     .navUl{
-        margin:0 auto;
+        margin-left:auto;
         display:flex;
 
         li{
@@ -45,6 +45,38 @@ nav{
             }
         }
     }
+    .toggleBtn{
+        position:absolute;
+        right:32px;
+        font-size:$title;
+        color:$bgcolor;
+        display: none;
+    }
 }
 
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+        padding:8px 24px;
+        align-items: flex-start;
+
+        .navUl{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+            
+            li{
+                width:100%;
+                text-align: center;
+            }
+        }
+        .navUl.activ{
+            display:flex;
+        }
+        .toggleBtn{
+            display: block;
+        }
+    }
+}
 

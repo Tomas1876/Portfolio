@@ -1,20 +1,14 @@
-import React , {Component} from 'react';
-import Home from "./Home"
+import React from 'react';
+import {Link} from 'react-router-dom';
 
-class HeaderMenu extends Component {
-    render(){
-        console.log(this.props)
-        if(this.props.match.params.name == "home"){
-            return <Home />
-        } else if(this.props.match.params.name == "project"){
-            return
-        } else if(this.props.match.params.name == "skills"){
-            return 
-        } else if(this.props.match.params.name == "about"){
-            return 
-        }
 
-    }
+const HeaderMenu =({menu})=> {
+    console.log(menu)
+    return(
+        <li className="headerMenu">
+            <Link to="/home">{menu}</Link>
+        </li> 
+    )
 }
 
 export default HeaderMenu;

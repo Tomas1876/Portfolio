@@ -1,28 +1,36 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import {BrowserRouter,Switch,Route,Link} from 'react-router-dom';
 import Logo from "../img/logo02.png";
-import GitLogo from "../img/github.jpg";
 import Home from './Home';
 import Projects from './Projects';
 import Skills from './Skills';
 import About from './About';
+import HeaderMenu from './HeaderMenu';
 
 export const imgUrl = "../img/";
 const Header = () =>{
     console.log("헤더 렌더링")
+    const menu=[
+        "HOME","PROJECT","SKILLS","ABOUT"
+    ]
+    const toggleMenu=()=>{
+
+    }
     return(
         <BrowserRouter>       
         <nav>
-            <div class="logo">
+            <div className="nav"></div>
+            <div className="logo">
                 <img src={Logo} alt="logo" />
             </div>
             <ul className="navUl">
-                <li className="headerMenu"><Link to="/home">HOME</Link></li>            
-                <li className="headerMenu"><Link to="/project">PROJECT</Link></li>                
-                <li className="headerMenu"><Link to="/skills">SKILLS</Link></li>               
-                <li className="headerMenu"><Link to="/about">ABOUT</Link></li>               
+                {menu.map((v)=>{
+                    return( <HeaderMenu menu={v} key={v}/>)
+                })}              
             </ul>
-            <div class="logo"><img src={GitLogo} alt="github" /></div>
+            <div className="toggleBtn" onClick={toggleMenu}>
+                <i className="fas fa-bars"></i>
+            </div>
         </nav>
         <Switch>
             <Route path="/home" component={Home} />
@@ -31,7 +39,7 @@ const Header = () =>{
             <Route path="/about" component={About} />
         </Switch>
         </BrowserRouter>
-    );
+    );    
 };
 
 export default Header;

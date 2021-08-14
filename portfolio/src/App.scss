@@ -1,5 +1,4 @@
-body{
-    
+body{   
     $bgcolor:#f9f5ea !global;
     $lightblue:#d7edf2 !global;
     $blue:#88a4ca !global;
@@ -17,12 +16,15 @@ body{
     background-color:$bgcolor;
     width:100%;
 }
+
 *{
     box-sizing: border-box;
 }
+
 ul{
     list-style: none;
 }
+
 a{  
     text-decoration: none; 
     color:$bgcolor; 
@@ -30,4 +32,14 @@ a{
 
 button{
     border: none;       
+}
+
+article{
+    width:100vw;
+    position:absolute;
+    top:77px;
+}
+
+section{
+    width:100%;
 }

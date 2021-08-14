@@ -1,8 +1,8 @@
-import React,{useRef} from 'react';
-import {BrowserRouter,Switch,Route,Link} from 'react-router-dom';
+import React from 'react';
+import {BrowserRouter,Switch,Route} from 'react-router-dom';
 import Logo from "../img/logo02.png";
 import Home from './Home';
-import Projects from './Projects';
+import Project from './Project';
 import Skills from './Skills';
 import About from './About';
 import HeaderMenu from './HeaderMenu';
@@ -11,7 +11,10 @@ export const imgUrl = "../img/";
 const Header = () =>{
     console.log("헤더 렌더링")
     const menu=[
-        "HOME","PROJECT","SKILLS","ABOUT"
+        {link:"/home", name:"HOME"},
+        {link:"/project", name:"PROJECT"},
+        {link:"/skills",name:"SKILLS"},
+        {link:"about", name:"ABOUT"}
     ]
     const toggleMenu=()=>{
 
@@ -34,7 +37,7 @@ const Header = () =>{
         </nav>
         <Switch>
             <Route path="/home" component={Home} />
-            <Route path="/project" component={Projects} />
+            <Route path="/project" component={Project} />
             <Route path="/skills" component={Skills} />
             <Route path="/about" component={About} />
         </Switch>

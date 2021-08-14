@@ -1,4 +1,4 @@
-.HomeMain{
+.HomeContainer{
     $bgcolor:#f9f5ea !global;
     $lightblue:#d7edf2 !global;
     $blue:#88a4ca !global;
@@ -10,12 +10,28 @@
     $title:24px !global;
     $font:16px !global;
 
+    height:100vh;
     text-align: center;
     color:$fontcolor;
     font-size:30px;
-    margin-top: 150px;
-    img{
-        width:250px;
-        height: 300px;
+    .logoBox{
+        margin-top: 150px;
+        img{
+            width:250px;
+            height: 300px;
+        }
+    }
+
+    .down{
+        animation: motion 0.7s linear 0s infinite alternate;
+        margin-top: 100px;
+        img{
+            width:50px;
+            height:70px;
+        }
+    }
+    @keyframes motion {
+        0% {margin-top: 100px;}
+        100% {margin-top: 115px;}
     }
 }

@@ -1,0 +1,31 @@
+.ProjectBox{
+    $bgcolor:#f9f5ea !global;
+    $lightblue:#d7edf2 !global;
+    $blue:#88a4ca !global;
+    $darkblue:#5c7eac !global;
+    $pink:#eb6366 !global;
+    $fontcolor:#291c16 !global;
+    $aroundpadding: 12px 24px !global;
+    $sidepadding: 12px !global;
+    $title:24px !global;
+    $font:16px !global;
+
+    display:flex;
+    width:80%;
+    margin:30px auto;
+    .pImg{
+        width:50%;
+        img{
+            width:100%;
+            height: 100%;
+            overflow:hidden;
+        }
+    }
+    .pInfo{
+        width:50%;
+        padding:$aroundpadding
+    }
+    a{
+        color:$fontcolor;
+    }
+}

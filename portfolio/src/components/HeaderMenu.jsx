@@ -6,7 +6,7 @@ const HeaderMenu =({menu})=> {
     console.log(menu)
     return(
         <li className="headerMenu">
-            <Link to={menu.link}>{menu.name}</Link>
+            {menu.name}
         </li> 
     )
 }

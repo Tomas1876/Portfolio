@@ -20,7 +20,7 @@ const Project = () => {
         console.log("프로젝트 렌더링")
         return(
             <>
-            {projects.map((v, i)=><ProjectBox pInfo={v} index={i}/>)}
+            {projects.map((v, i)=><ProjectBox pInfo={v} index={i} key={v.title}/>)}
             </>
         );
     

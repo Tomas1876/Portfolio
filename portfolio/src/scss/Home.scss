@@ -1,5 +1,9 @@
-
-.HomeContainer{
+/*
+article > section{
+    padding-top:77px;
+}
+*/
+section{
     $bgcolor:#f9f5ea !global;
     $lightblue:#d7edf2 !global;
     $blue:#88a4ca !global;
@@ -10,6 +14,22 @@
     $sidepadding: 12px !global;
     $title:24px !global;
     $font:16px !global;
+    
+    .sectionTitle{
+        font-size:36px;
+        font-weight:600;
+        letter-spacing: 1px;
+        text-align: center;
+        padding:50px 0;
+        color: $blue;
+    }
+
+    &>div{
+      text-align: center;  
+    }
+}
+.HomeContainer{
+    
 
     height:100vh;
     text-align: center;

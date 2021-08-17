@@ -2,7 +2,7 @@ import React from 'react';
 import "../scss/Project.scss";
 
 const ProjectBox = ({pInfo, index}) =>{
-
+{/*
     if(index%2 === 0){
 
         return(
@@ -21,7 +21,7 @@ const ProjectBox = ({pInfo, index}) =>{
         );
 
     } else{
-
+    
         return(
             <div className="ProjectBox">
                 <div className="pInfo">
@@ -37,7 +37,23 @@ const ProjectBox = ({pInfo, index}) =>{
             </div>
         );
 
-    }
+   }*/}
+   const showinfo = (e)=>{
+    console.log("마우스 오버")
+    console.log(e.target);
+    return (<div>"야호"</div>)
+   }
+   return(
+    <div className="ProjectBox">
+        <div className="pTitle">{pInfo.title}</div>    
+        <div className="pIntro">{pInfo.intro}</div>
+        <div className="pImg" onMouseOver={showinfo}>
+            <img alt="projectImg" src={pInfo.img} className={index} />
+        </div>
+        <div className="sub">마우스 오버하시면 프로젝트 정보가 노출됩니다.</div>
+    </div>
+
+);
     
 }
 

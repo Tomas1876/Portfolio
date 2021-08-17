@@ -12,47 +12,47 @@
     $title:24px !global;
     $font:16px !global;
 }
-nav{
-    width:100vw;
-    background-color: $fontcolor;
-    display:flex;
-    align-items: center;
-    padding:$aroundpadding;
-    position:sticky;
-    top:0;
-    color:$bgcolor;
-    
-    img{
-        width: 40px;
-        height:40px;
-    }
 
-    button{
+    nav{
+        width:100vw;
         background-color: $fontcolor;
-        color:$bgcolor;
-    }
-
-    .navUl{
-        margin-left:auto;
         display:flex;
-
-        li{
-            padding: 0 $sidepadding;
-            &:hover{
-                background-color: $fontcolor;
-                color:$bgcolor;
-                /*border-bottom: 3px $fontcolor solid;*/
+        align-items: center;
+        padding:$aroundpadding;
+        color:$bgcolor;
+        
+        img{
+            width: 40px;
+            height:40px;
+        }
+    
+        button{
+            background-color: $fontcolor;
+            color:$bgcolor;
+        }
+    
+        .navUl{
+            margin-left:auto;
+            display:flex;
+    
+            li{
+                padding: 0 $sidepadding;
+                &:hover{
+                    background-color: $fontcolor;
+                    color:$bgcolor;
+                    /*border-bottom: 3px $fontcolor solid;*/
+                }
             }
         }
+        .toggleBtn{
+            position:absolute;
+            right:32px;
+            font-size:$title;
+            color:$bgcolor;
+            display: none;
+        }
     }
-    .toggleBtn{
-        position:absolute;
-        right:32px;
-        font-size:$title;
-        color:$bgcolor;
-        display: none;
-    }
-}
+    
 
 @media screen and (max-width:768px){
     nav{

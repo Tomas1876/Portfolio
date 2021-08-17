@@ -1,9 +1,5 @@
 import React, {Component} from 'react';
 import Logo from "../img/logo02.png";
-import Home from './Home';
-import Project from './Project';
-import Skills from './Skills';
-import About from './About';
 import HeaderMenu from './HeaderMenu';
 
 export const imgUrl = "../img/";

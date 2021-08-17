@@ -2,10 +2,10 @@ import React, {useRef, useState} from 'react';
 import '../scss/Home.scss';
 import '../scss/Header.scss';
 import Logo from "../img/logo01.png";
-import Down from "../img/down.png";
-import Header from "./Header";
+import Logo2 from "../img/logo02.png";
 import Project from './Project';
 import Skills from './Skills';
+import Contact from "./Contact"
 
 
 const Home =()=> {
@@ -15,10 +15,10 @@ const Home =()=> {
         {link:"/", name:"HOME"},
         {link:"/project", name:"PROJECT"},
         {link:"/skills",name:"SKILLS"},
-        {link:"about", name:"ABOUT"}
+        {link:"contact", name:"CONTACT"}
         ]
     const [currentTab,setCurrentTab] = useState();
-    const pageDown = () =>{
+    const pageDown = () =>{   
         scrollRef.current.scrollIntoView({inline:"center", behavior: 'smooth'})
     }
     
@@ -29,14 +29,15 @@ const Home =()=> {
         <header>
         <nav>
             <div className="logo">
-                <img src={Logo} alt="logo" />
+                <img src={Logo2} alt="logo" />
             </div>
             <ul className="navUl">
                 {menu.map((v, i)=>{
                    return( <li className="headerMenu" onClick={() => {
+                    console.log("페이지 다운 클릭")
                     tabRef.current[i].scrollIntoView({behavior: "smooth"});
                     setCurrentTab(tabRef.current[i]);
-                  }} key={v}>{v.name}</li>);
+                  }} key={v.name}>{v.name}</li>);
                 })}              
             </ul>
             <div className="toggleBtn">
@@ -56,10 +57,15 @@ const Home =()=> {
                 <div className="down"><i className="fas fa-chevron-down" ref={scrollRef} onClick={pageDown}></i></div>              
             </section>
             <section className="ProjectContainer" ref={(el) => (tabRef.current[1] = el)}>
+                <div className="sectionTitle">PROJECT</div>
                 <Project />
             </section>
             <section className="SkillsContainer" ref={(el) => (tabRef.current[2] = el)}>
+            <div className="sectionTitle">SKILLS</div>
                 <Skills />
+            </section>
+            <section className="ContactContainer" ref={(el)=>(tabRef.current[3] = el)}>
+                <Contact />
             </section>
         </article>
         </>

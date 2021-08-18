@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class Skills extends Component {
+class Skill extends Component {
 
     render(){
         console.log("스킬 렌더링")
@@ -13,4 +13,4 @@ class Skills extends Component {
 
 }
 
-export default Skills;
+export default Skill;

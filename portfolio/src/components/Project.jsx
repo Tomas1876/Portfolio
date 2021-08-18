@@ -19,9 +19,9 @@ const projects = [
 const Project = () => {
         console.log("프로젝트 렌더링")
         return(
-            <>
+            <section classNAme="ProjectContainer">
             {projects.map((v, i)=><ProjectBox pInfo={v} index={i} key={v.title}/>)}
-            </>
+            </section>
         );
     
 

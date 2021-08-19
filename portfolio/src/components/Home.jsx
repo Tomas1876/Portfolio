@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import '../scss/Home.scss';
 import Logo from "../img/logo01.png";

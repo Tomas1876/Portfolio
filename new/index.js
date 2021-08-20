@@ -52,5 +52,22 @@ window.onload = () =>{
         p_box.append(pTitle, pIntro, pImg, sub)
         p_container.appendChild(p_box)
     }
+
+
+    const imgsrc = "img/"
+    const skills=[`${imgsrc}css.png`,
+                `${imgsrc}html.png`,
+                `${imgsrc}js.png`,
+                `${imgsrc}sass.png`,
+                `${imgsrc}java.png`,
+                `${imgsrc}spring.png`]
+    const skillWrap = document.querySelector(".skillWrap");
+    for(let i =0; i<skills.length; i++){
+        const img = makeElement("img","skillBox")
+        img.setAttribute("src", skills[i])
+        skillWrap.appendChild(img)
+
+    }
+
 }
 

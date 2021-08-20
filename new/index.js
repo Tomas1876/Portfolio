@@ -14,6 +14,15 @@ window.onload = () =>{
         li.innerHTML = menu[i];
         navUl.appendChild(li)
     }
+    const h_menu = document.getElementsByClassName("headerMenu")
+    const sections = document.querySelectorAll("section")
+    scroll=(s)=>{
+        console.log(s)
+        s.scrollIntoView({behavior: "smooth"})
+    }
+    Array.from(h_menu).forEach((v, i)=>{
+       v.onclick = () => {scroll(sections[i])}
+    })
 
     const p_container = document.querySelector(".projectContainer")
     const projects = [

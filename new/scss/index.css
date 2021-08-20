@@ -64,16 +64,17 @@ header {
       display: block; } }
 
 /* 홈 */
-section .sectionTitle {
-  font-size: 36px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-align: center;
-  padding: 50px 0;
-  color: #88a4ca; }
-
-section > div {
-  text-align: center; }
+section {
+  padding-top: 77px; }
+  section .sectionTitle {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 50px 0;
+    color: #88a4ca; }
+  section > div {
+    text-align: center; }
 
 .HomeContainer {
   height: 100vh;
@@ -126,7 +127,9 @@ section > div {
   height: 100vh; }
   .skillContainer .skillWrap {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 70%;
+    margin: auto; }
     .skillContainer .skillWrap .skillBox {
       width: 150px;
       padding: 20px;

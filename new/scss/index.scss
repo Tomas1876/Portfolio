@@ -10,6 +10,7 @@
     $sidepadding: 12px !global;
     $title:24px !global;
     $font:16px !global;
+    $section-top:77px;
 }
 
 *{
@@ -103,6 +104,7 @@ header{
 
 /* 홈 */
 section{
+    padding-top:77px;
     .sectionTitle{
         font-size:36px;
         font-weight:600;
@@ -182,13 +184,15 @@ section{
 
 /*스킬*/
 .skillContainer{
-
+    
     width:100vw;
     height:100vh;
 
     .skillWrap{
         display: flex;
         flex-wrap: wrap;
+        width:70%;
+        margin: auto;
         .skillBox{    
             width:150px;
             padding:20px;

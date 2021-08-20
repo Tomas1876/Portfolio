@@ -1,0 +1,16 @@
+.skillContainer {
+  width: 100vw;
+  height: 100vh; }
+  .skillContainer .skillWrap {
+    display: flex;
+    flex-wrap: wrap; }
+    .skillContainer .skillWrap .skillBox {
+      width: 150px;
+      padding: 20px;
+      margin: auto; }
+      .skillContainer .skillWrap .skillBox img {
+        width: 100%;
+        margin: auto; }
+
+
+/*# sourceMappingURL=/Skill.cd7f9ee2.css.map */

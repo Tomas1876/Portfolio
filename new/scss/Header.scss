@@ -1,0 +1,90 @@
+#root{
+    margin:0;
+    padding:0;
+    $bgcolor:#f9f5ea !global;
+    $lightblue:#d7edf2 !global;
+    $blue:#88a4ca !global;
+    $darkblue:#5c7eac !global;
+    $pink:#eb6366 !global;
+    $fontcolor:#291c16 !global;
+    $aroundpadding: 12px 24px !global;
+    $sidepadding: 12px !global;
+    $title:24px !global;
+    $font:16px !global;
+}
+header{
+
+
+    nav{
+        width:100vw;
+        background-color: $fontcolor;
+        display:flex;
+        align-items: center;
+        padding:$aroundpadding;
+        color:$bgcolor;
+        
+        .logo{
+            img{
+                width: 40px;
+                height:40px;
+            }
+
+        }
+
+        
+    
+        button{
+            background-color: $fontcolor;
+            color:$bgcolor;
+        }
+    
+        .navUl{
+            margin-left:auto;
+            display:flex;
+    
+            li{
+                padding: 0 $sidepadding;
+                &:hover{
+                    background-color: $fontcolor;
+                    color:$bgcolor;
+                    /*border-bottom: 3px $fontcolor solid;*/
+                }
+            }
+        }
+        .toggleBtn{
+            position:absolute;
+            right:32px;
+            font-size:$title;
+            color:$bgcolor;
+            display: none;
+        }
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+        padding:8px 24px;
+        align-items: flex-start;
+
+        .navUl{
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            width:100%;
+            
+            li{
+                width:100%;
+                text-align: center;
+            }
+        }
+        .navUl.activ{
+            display:flex;
+        }
+        .toggleBtn{
+            display: block;
+        }
+    }
+}
+

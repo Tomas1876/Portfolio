@@ -1,6 +1,5 @@
 #root{
-    margin:0;
-    padding:0;
+
     $bgcolor:#f9f5ea !global;
     $lightblue:#d7edf2 !global;
     $blue:#88a4ca !global;
@@ -12,17 +11,33 @@
     $title:24px !global;
     $font:16px !global;
 }
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: $bgcolor;
+}
+ul{
+    list-style: none;
+}
+
+/*헤더*/
 header{
+    position:sticky;
+    top:0;
+    width:100vw;
     nav{
-        width:100vw;
+        width:100%;
+        
         background-color: $fontcolor;
         display:flex;
         align-items: center;
         padding:$aroundpadding;
         color:$bgcolor;
-
         .logo{
-            background-color: white;
             img{
                 width: 40px;
                 height:40px;
@@ -30,8 +45,6 @@ header{
 
         }
 
-        
-    
         button{
             background-color: $fontcolor;
             color:$bgcolor;
@@ -60,7 +73,7 @@ header{
     }
     
 }
-
+/*헤더 반응형*/
 @media screen and (max-width:768px){
     nav{
         flex-direction: column;
@@ -78,7 +91,7 @@ header{
                 text-align: center;
             }
         }
-        .navUl.activ{
+        .navUl.active{
             display:flex;
         }
         .toggleBtn{
@@ -87,3 +100,45 @@ header{
     }
 }
 
+
+/* 홈 */
+section{
+    .sectionTitle{
+        font-size:36px;
+        font-weight:600;
+        letter-spacing: 1px;
+        text-align: center;
+        padding:50px 0;
+        color: $blue;
+    }
+
+    &>div{
+      text-align: center;  
+    }
+}
+.HomeContainer{
+     height:100vh;
+    text-align: center;
+    color:$fontcolor;
+    font-size:30px;
+    .logoBox{
+        margin-top: 150px;
+        img{
+            width:250px;
+            height: 300px;
+        }
+    }
+
+    .down{
+        animation: motion 0.7s linear 0s infinite alternate;
+        margin-top: 100px;
+        img{
+            width:50px;
+            height:70px;
+        }
+    }
+    @keyframes motion {
+        0% {margin-top: 100px;}
+        100% {margin-top: 115px;}
+    }
+}

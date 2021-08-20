@@ -5,27 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="scss/Home.scss">
-    <link rel="stylesheet" href="scss/Project.scss">
-    <link rel="stylesheet" href="scss/Skill.scss">
-    <link rel="stylesheet" href="scss/Header.scss">
     <script defer src="index.js"></script>
+    <link rel="stylesheet" href="scss/index.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav>
-            <div className="logo">
+            <div class="logo">
                 <img src="img/logo02.png" alt="logo" />
             </div>
-            <ul className="navUl">
+            <ul class="navUl">
            
             </ul>
-            <div className="toggleBtn">
-                <i className="fas fa-bars"></i>
+            <div class="toggleBtn">
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
+    <article>
+        <section class="HomeContainer">
+            <div class="logoBox">
+                <img src="img/logo01.png" alt="logo" />
+            </div>
+            <div class="mainTitle">
+                <p>안녕하세요<br />웹개발자 이가희입니다</p>
+            </div>
+        </section>
+
+        <section class="projectContainer">
+            <div class="projectBox">
+                <div class="pTitle">{pInfo.title}</div>    
+                <div class="pIntro">{pInfo.intro}</div>
+                <div class="pImg" onMouseOver={showinfo}>
+                    <img alt="projectImg" src={pInfo.img} class={index} />
+                </div>
+                <div class="sub">마우스 오버하시면 프로젝트 정보가 노출됩니다.</div>
+            </div>
+        </section>
+    </article>
     
 </body>
 </html>

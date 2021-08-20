@@ -1,0 +1,99 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #f9f5ea; }
+
+ul {
+  list-style: none; }
+
+/*헤더*/
+header {
+  position: sticky;
+  top: 0;
+  width: 100vw; }
+  header nav {
+    width: 100%;
+    background-color: #291c16;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: #f9f5ea; }
+    header nav .logo img {
+      width: 40px;
+      height: 40px; }
+    header nav button {
+      background-color: #291c16;
+      color: #f9f5ea; }
+    header nav .navUl {
+      margin-left: auto;
+      display: flex; }
+      header nav .navUl li {
+        padding: 0 12px; }
+        header nav .navUl li:hover {
+          background-color: #291c16;
+          color: #f9f5ea;
+          /*border-bottom: 3px $fontcolor solid;*/ }
+    header nav .toggleBtn {
+      position: absolute;
+      right: 32px;
+      font-size: 24px;
+      color: #f9f5ea;
+      display: none; }
+
+/*헤더 반응형*/
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 8px 24px;
+    align-items: flex-start; }
+    nav .navUl {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; }
+      nav .navUl li {
+        width: 100%;
+        text-align: center; }
+    nav .navUl.active {
+      display: flex; }
+    nav .toggleBtn {
+      display: block; } }
+
+/* 홈 */
+section .sectionTitle {
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 50px 0;
+  color: #88a4ca; }
+
+section > div {
+  text-align: center; }
+
+.HomeContainer {
+  height: 100vh;
+  text-align: center;
+  color: #291c16;
+  font-size: 30px; }
+  .HomeContainer .logoBox {
+    margin-top: 150px; }
+    .HomeContainer .logoBox img {
+      width: 250px;
+      height: 300px; }
+  .HomeContainer .down {
+    animation: motion 0.7s linear 0s infinite alternate;
+    margin-top: 100px; }
+    .HomeContainer .down img {
+      width: 50px;
+      height: 70px; }
+
+@keyframes motion {
+  0% {
+    margin-top: 100px; }
+  100% {
+    margin-top: 115px; } }

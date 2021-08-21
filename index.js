@@ -19,12 +19,13 @@ window.onload = () =>{
     const h_menu = document.getElementsByClassName("headerMenu")
     const sections = document.querySelectorAll("section")
     scroll=(s)=>{
-        console.log(s)
         s.scrollIntoView({behavior: "smooth"})
         const target = event.target
+        console.log(target)
         const h_menu = document.getElementsByClassName("headerMenu")
         Array.from(h_menu).forEach((v)=>{
-            v == target? v.classList.remove("currentTab") : v.classList.remove("currentTab")
+            console.log(v)
+            v == target? v.classList.add("currentTab") : v.classList.remove("currentTab")
         })
     }
     Array.from(h_menu).forEach((v, i)=>{

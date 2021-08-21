@@ -73,6 +73,9 @@ header{
                     background-color: $fontcolor;
                     margin:auto;
                 }
+                .currentMenu{
+                    background-color: $bgcolor;
+                }
             }
             .currentTab{
                 background-color: $bgcolor;
@@ -142,6 +145,9 @@ section{
 
     &>div{
       text-align: center;  
+    }
+    @media screen and (max-width:768px){
+        padding-top:300px;
     }
 
 }

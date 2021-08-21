@@ -148,7 +148,7 @@ section{
 
 /*프로젝트*/
 .projectContainer{
-
+    width:100vw;
     .projectBox{
         width:80%;
         margin:auto;
@@ -191,11 +191,11 @@ section{
     .skillWrap{
         display: flex;
         flex-wrap: wrap;
-        width:70%;
+        width:60%;
         margin: auto;
         .skillBox{    
-            width:150px;
-            padding:20px;
+            width:180px;
+            padding:50px;
             margin:auto;
 
         }

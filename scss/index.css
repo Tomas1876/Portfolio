@@ -100,26 +100,28 @@ section {
     margin-top: 115px; } }
 
 /*프로젝트*/
-.projectContainer .projectBox {
-  width: 80%;
-  margin: auto;
-  margin-bottom: 50px; }
-  .projectContainer .projectBox .pImg {
-    width: 50%;
-    margin: auto; }
-    .projectContainer .projectBox .pImg img {
-      width: 100%;
-      height: 100%;
-      overflow: hidden; }
-  .projectContainer .projectBox .pInfo {
-    width: 50%;
-    padding: 12px 24px; }
-  .projectContainer .projectBox a {
-    color: #291c16; }
-  .projectContainer .projectBox .pTitle {
-    font-size: 24px; }
-  .projectContainer .projectBox .sub {
-    padding: 20px; }
+.projectContainer {
+  width: 100vw; }
+  .projectContainer .projectBox {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 50px; }
+    .projectContainer .projectBox .pImg {
+      width: 50%;
+      margin: auto; }
+      .projectContainer .projectBox .pImg img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+    .projectContainer .projectBox .pInfo {
+      width: 50%;
+      padding: 12px 24px; }
+    .projectContainer .projectBox a {
+      color: #291c16; }
+    .projectContainer .projectBox .pTitle {
+      font-size: 24px; }
+    .projectContainer .projectBox .sub {
+      padding: 20px; }
 
 /*스킬*/
 .skillContainer {
@@ -128,9 +130,9 @@ section {
   .skillContainer .skillWrap {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 60%;
     margin: auto; }
     .skillContainer .skillWrap .skillBox {
-      width: 150px;
-      padding: 20px;
+      width: 180px;
+      padding: 50px;
       margin: auto; }

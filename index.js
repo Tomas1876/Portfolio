@@ -11,17 +11,25 @@ window.onload = () =>{
 
     for(let i =0; i < menu.length; i++){
         const li = makeElement("li", "headerMenu")
+        const line = makeElement("div","menuLine")
         li.innerHTML = menu[i];
         navUl.appendChild(li)
+        li.append(line)
     }
     const h_menu = document.getElementsByClassName("headerMenu")
     const sections = document.querySelectorAll("section")
     scroll=(s)=>{
         console.log(s)
         s.scrollIntoView({behavior: "smooth"})
+        const target = event.target
+        const h_menu = document.getElementsByClassName("headerMenu")
+        Array.from(h_menu).forEach((v)=>{
+            v == target? v.classList.remove("currentTab") : v.classList.remove("currentTab")
+        })
     }
     Array.from(h_menu).forEach((v, i)=>{
-       v.onclick = () => {scroll(sections[i])}
+       v.onclick = () => {scroll(sections[i])}      
+
     })
 
     const p_container = document.querySelector(".projectContainer")

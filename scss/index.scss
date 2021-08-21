@@ -21,6 +21,10 @@
 body{
     background-color: $bgcolor;
 }
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
 ul{
     list-style: none;
 }
@@ -28,17 +32,19 @@ ul{
 /*헤더*/
 header{
     position:sticky;
+    box-sizing: border-box;
     top:0;
     width:100vw;
     nav{
         width:100%;
-        
+        height: 68px;
         background-color: $fontcolor;
         display:flex;
         align-items: center;
-        padding:$aroundpadding;
         color:$bgcolor;
+        box-sizing: border-box;
         .logo{
+            padding:$aroundpadding;
             img{
                 width: 40px;
                 height:40px;
@@ -53,16 +59,36 @@ header{
     
         .navUl{
             margin-left:auto;
+            height: 100%;
             display:flex;
-    
+            box-sizing: border-box;
+            
             li{
-                padding: 0 $sidepadding;
+                height: 100%;
+                vertical-align: middle;
+                padding: 23px $sidepadding;              
                 &:hover{
+                    background-color: $bgcolor;
+                    color:$fontcolor;
+                    box-sizing: border-box;
+                    font-weight: 700;
+                }
+                .menuLine{
+                    width:40px;
+                    height:3px;
                     background-color: $fontcolor;
-                    color:$bgcolor;
-                    /*border-bottom: 3px $fontcolor solid;*/
+                    margin:auto;
                 }
             }
+            .currentTab{
+                background-color: $bgcolor;
+                color:$fontcolor;
+                box-sizing: border-box;
+                font-weight: 700;
+            }
+        }
+        .space{
+            width:50px
         }
         .toggleBtn{
             position:absolute;
@@ -101,8 +127,7 @@ header{
     }
 }
 
-
-/* 홈 */
+/*본문 시작*/
 section{
     padding-top:77px;
     .sectionTitle{
@@ -113,93 +138,104 @@ section{
         padding:50px 0;
         color: $blue;
     }
+    .subBar{
+        width:100px;
+        height:5px;
+        background-color: $blue;
+        margin:auto;
+    }
 
     &>div{
       text-align: center;  
     }
+
 }
+    /*홈*/
+    .HomeContainer{
+        height:100vh;
+       text-align: center;
+       color:$fontcolor;
+       font-size:30px;
+       .logoBox{
+           margin-top: 150px;
+           img{
+               width:250px;
+               height: 300px;
+           }
+       }
+   
+       .down{
+           animation: motion 0.7s linear 0s infinite alternate;
+           margin-top: 100px;
+           img{
+               width:50px;
+               height:70px;
+           }
+       }
+       @keyframes motion {
+           0% {margin-top: 100px;}
+           100% {margin-top: 115px;}
+       }
+   }
+   
+   /*프로젝트*/
+   .projectContainer{
+       width:100vw;
+       .projectBox{
+           width:80%;
+           margin:auto;
+           margin-bottom:50px;
+           .pImg{
+               width:50%;
+               margin: auto;
+               img{
+                   width:100%;
+                   height: 100%;
+                   overflow:hidden;
+               }
+           }
+           .pInfo{
+               width:50%;
+               padding:$aroundpadding
+           }
+           a{
+               color:$fontcolor;
+           }
+       
+           .pTitle{
+               font-size: $title;
+               
+           }
+       
+           .sub{
+               padding:20px;
+           }
+       }     
+   }
+   
+   /*스킬*/
+   .skillContainer{    
+       width:100vw;
+       height:100vh;
+   
+       .skillWrap{
+           display: flex;
+           flex-wrap: wrap;
+           width:60%;
+           margin: auto;
+           justify-content:center;
+           .skillBox{    
+               width:150px;
+               margin:50px;
+          }
+       }
 
-.HomeContainer{
-     height:100vh;
-    text-align: center;
-    color:$fontcolor;
-    font-size:30px;
-    .logoBox{
-        margin-top: 150px;
-        img{
-            width:250px;
-            height: 300px;
-        }
-    }
+   }
 
-    .down{
-        animation: motion 0.7s linear 0s infinite alternate;
-        margin-top: 100px;
-        img{
-            width:50px;
-            height:70px;
-        }
-    }
-    @keyframes motion {
-        0% {margin-top: 100px;}
-        100% {margin-top: 115px;}
-    }
-}
-
-/*프로젝트*/
-.projectContainer{
-    width:100vw;
-    .projectBox{
-        width:80%;
-        margin:auto;
-        margin-bottom:50px;
-        .pImg{
-            width:50%;
-            margin: auto;
-            img{
-                width:100%;
-                height: 100%;
-                overflow:hidden;
-            }
-        }
-        .pInfo{
-            width:50%;
-            padding:$aroundpadding
-        }
-        a{
-            color:$fontcolor;
-        }
-    
-        .pTitle{
-            font-size: $title;
-            
-        }
-    
-        .sub{
-            padding:20px;
-        }
-    }
-    
-}
-
-/*스킬*/
-.skillContainer{
-    
+   /*컨택트*/
+   .contactContainer{
     width:100vw;
     height:100vh;
-
-    .skillWrap{
-        display: flex;
-        flex-wrap: wrap;
-        width:60%;
-        margin: auto;
-        .skillBox{    
-            width:180px;
-            padding:50px;
-            margin:auto;
-
-        }
-    }
-    
-
 }
+
+

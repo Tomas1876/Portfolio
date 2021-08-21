@@ -16,7 +16,7 @@ window.onload = () =>{
         navUl.appendChild(li)
         li.append(line)
     }
-    
+
     const h_menu = document.getElementsByClassName("headerMenu")
     const sections = document.querySelectorAll("section")
 
@@ -28,6 +28,19 @@ window.onload = () =>{
             v == target? v.classList.add("currentTab") : v.classList.remove("currentTab")
         })
     }
+
+    //반응형 헤더 메뉴
+    const toggleBtn = document.querySelector('.toggleBtn');
+
+    toggleBtn.addEventListener('click', ()=>{
+        navUl.classList.toggle('active')   
+    })
+    //반응형, 그 중에서도 메뉴 펼쳐졌을 때만 작동하게 하기
+    navUl.addEventListener('click',()=>{   
+        if(navUl.classList.contains('active')){
+            navUl.classList.toggle('active')
+        }
+    })
 
     Array.from(h_menu).forEach((v, i)=>{
        v.onclick = () => {scroll(sections[i])}      
@@ -74,9 +87,9 @@ window.onload = () =>{
 
 
     const imgsrc = "img/"
-    const skills=[`${imgsrc}css.png`,
-                `${imgsrc}html.png`,
+    const skills=[`${imgsrc}html.png`,
                 `${imgsrc}js.png`,
+                `${imgsrc}css.png`,
                 `${imgsrc}sass.png`,
                 `${imgsrc}java.png`,
                 `${imgsrc}spring.png`]

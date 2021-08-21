@@ -19,7 +19,8 @@ header {
   position: sticky;
   box-sizing: border-box;
   top: 0;
-  width: 100vw; }
+  width: 100vw;
+  /*헤더 반응형*/ }
   header nav {
     width: 100%;
     background-color: #291c16;
@@ -58,29 +59,28 @@ header {
       width: 50px; }
     header nav .toggleBtn {
       position: absolute;
+      top: 22px;
       right: 32px;
       font-size: 24px;
       color: #f9f5ea;
       display: none; }
-
-/*헤더 반응형*/
-@media screen and (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 8px 24px;
-    align-items: flex-start; }
-    nav .navUl {
-      display: none;
+  @media screen and (max-width: 768px) {
+    header nav {
       flex-direction: column;
-      align-items: center;
-      width: 100%; }
-      nav .navUl li {
-        width: 100%;
-        text-align: center; }
-    nav .navUl.active {
-      display: flex; }
-    nav .toggleBtn {
-      display: block; } }
+      padding: 8px 24px;
+      align-items: flex-start; }
+      header nav .navUl {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%; }
+        header nav .navUl li {
+          width: 100%;
+          text-align: center; }
+      header nav .navUl.active {
+        display: flex; }
+      header nav .toggleBtn {
+        display: block; } }
 
 /*본문 시작*/
 section {
@@ -158,7 +158,7 @@ section {
 /*스킬*/
 .skillContainer {
   width: 100vw;
-  height: 100vh; }
+  /*height:100vh;*/ }
   .skillContainer:before {
     content: '';
     width: 2px;

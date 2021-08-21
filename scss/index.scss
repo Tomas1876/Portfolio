@@ -86,40 +86,41 @@ header{
         }
         .toggleBtn{
             position:absolute;
+            top:22px;
             right:32px;
             font-size:$title;
             color:$bgcolor;
             display: none;
         }
     }
-    
-}
-/*헤더 반응형*/
-@media screen and (max-width:768px){
-    nav{
-        flex-direction: column;
-        padding:8px 24px;
-        align-items: flex-start;
-
-        .navUl{
-            display: none;
+    /*헤더 반응형*/
+    @media screen and (max-width:768px){
+        nav{
             flex-direction: column;
-            align-items: center;
-            width:100%;
-            
-            li{
+            padding:8px 24px;
+            align-items: flex-start;
+
+            .navUl{
+                display: none;
+                flex-direction: column;
+                align-items: center;
                 width:100%;
-                text-align: center;
+                
+                li{
+                    width:100%;
+                    text-align: center;
+                }
             }
-        }
-        .navUl.active{
-            display:flex;
-        }
-        .toggleBtn{
-            display: block;
+            .navUl.active{
+                display:flex;
+            }
+            .toggleBtn{
+                display: block;
+            }
         }
     }
 }
+
 
 /*본문 시작*/
 section{
@@ -218,7 +219,7 @@ section{
    /*스킬*/
    .skillContainer{    
        width:100vw;
-       height:100vh;
+       /*height:100vh;*/
        &:before {
         content: '';
         width: 2px;

@@ -5,7 +5,7 @@ makeElement = (el, name)=>{
 }
 
 window.onload = () =>{
-
+    {
     const navUl = document.querySelector(".navUl")
     const menu=["HOME","PROJECT","SKILL","CONTACT"]
 
@@ -45,7 +45,7 @@ window.onload = () =>{
     Array.from(h_menu).forEach((v, i)=>{
        v.onclick = () => {scroll(sections[i])}      
     })
-
+}
     const p_container = document.querySelector(".projectContainer")
     const projects = [
         {title:"CYCODING",
@@ -108,5 +108,41 @@ window.onload = () =>{
 
     }
 
+    //이메일, 깃허브 주소 자동 복사
+    let clipboard = new Clipboard('.btn');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+    write = (v)=> {
+        document.querySelector(".mail").value = v;
+    }
+
+    //contact 부분 이메일
+    emailjs.init("user_7vUM1GIt3vDSx1wu7bqFu");
+    document.querySelector('button[name=submit]').addEventListener('click',((e)=>{       	 
+        e.preventDefault();
+
+        let text = document.querySelector('#textarea').innerHTML;
+        let message = document.querySelector('input[name=message]');
+        message.value = text;
+        //let from_name = document.querySelector('input[name=from_name]');
+        let reply_to = document.querySelector('input[name=reply_to]');
+        let templateParams = {	
+        //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
+           // name: from_name.value,
+            reply_to : reply_to.value,
+            message : message.value
+        };       	
+        emailjs.send('gmail', 'template_rmvi8tw', templateParams)
+        //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
+         	.then(function(response) {
+         	    console.log('SUCCESS!', response.status, response.text);
+         	}, function(error) {
+         	    console.log('FAILED...', error);
+         	});
+      }));
 }
 

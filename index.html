@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!--email js-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <!--클립보드 자동 복사-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script defer src="index.js"></script>
@@ -27,7 +31,7 @@
         </nav>
     </header>
     <article>
-        <section class="HomeContainer">
+        <section class="homeContainer" id="home">
             <div class="logoBox">
                 <img src="img/logo01.png" alt="logo" />
             </div>
@@ -57,7 +61,21 @@
         </section>
         <section class="contactContainer">
             <div class="sectionTitle">CONTACT<div class="subBar"></div></div>
-            
+            <form>
+                <!-- email Js가 값을 못 받음
+                <input type="text" name="from_name" placeholder="이름을 입력하세요" value="" />-->
+                <input type="text" name="reply_to" placeholder="이메일을 입력하세요" />
+                
+                <input class="mail" value="To. mnd3259@gmail.com" readonly>
+                <div id="textarea" contenteditable></div>
+                <input type="hidden" name="message" id="message">
+                
+                <!--<textarea name="message" placeholder="성함과 연락처, 내용을 입력하세요"></textarea>-->
+                <button type="submit" name="submit">submit</button>
+
+                <input class="github" value="https://github.com/Tomas1876" readonly>
+                <button type="button" class="btn" data-clipboard-target=".github">Copy</button>
+            </form>
 
         </section>
         <div class="up"><i class="fas fa-caret-up"></i></div>

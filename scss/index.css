@@ -101,25 +101,22 @@ section {
     margin: auto; }
   section > div {
     text-align: center; }
-  @media screen and (max-width: 768px) {
-    section {
-      padding-top: 300px; } }
 
 /*홈*/
-.HomeContainer {
+.homeContainer {
   height: 100vh;
   text-align: center;
   color: #291c16;
   font-size: 30px; }
-  .HomeContainer .logoBox {
+  .homeContainer .logoBox {
     margin-top: 150px; }
-    .HomeContainer .logoBox img {
+    .homeContainer .logoBox img {
       width: 250px;
       height: 300px; }
-  .HomeContainer .down {
+  .homeContainer .down {
     animation: motion 0.7s linear 0s infinite alternate;
     margin-top: 100px; }
-    .HomeContainer .down img {
+    .homeContainer .down img {
       width: 50px;
       height: 70px; }
 
@@ -192,13 +189,32 @@ section {
     background: #5c7eac;
     display: block;
     margin: 0 auto; }
-  .contactContainer .up {
-    animation: motion 0.7s linear 0s infinite alternate;
-    margin-top: 100px;
-    margin: auto; }
+  .contactContainer form {
+    width: 500px;
+    margin: auto;
+    text-align: center; }
+  .contactContainer .mail, .contactContainer .github {
+    background-color: #d7edf2;
+    border: 1px #5c7eac solid;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    margin-bottom: 10px;
+    outline: none; }
+  .contactContainer #textarea {
+    background-color: #d7edf2;
+    border: 1px #5c7eac solid;
+    height: 300px;
+    outline: none;
+    text-align: left;
+    padding: 50px; }
 
-@keyframes motion {
-  0% {
-    margin-top: 100px; }
-  100% {
-    margin-top: 115px; } }
+.up {
+  text-align: center;
+  margin-top: 100px; }
+
+@media screen and (max-width: 768px) {
+  .projectContainer, .skillContainer, .contactContainer {
+    padding-top: 300px; }
+  .homcontainer {
+    padding-top: 100px; } }

@@ -16,21 +16,21 @@ window.onload = () =>{
         navUl.appendChild(li)
         li.append(line)
     }
+    
     const h_menu = document.getElementsByClassName("headerMenu")
     const sections = document.querySelectorAll("section")
+
     scroll=(s)=>{
         s.scrollIntoView({behavior: "smooth"})
         const target = event.target
-        console.log(target)
         const h_menu = document.getElementsByClassName("headerMenu")
         Array.from(h_menu).forEach((v)=>{
-            console.log(v)
             v == target? v.classList.add("currentTab") : v.classList.remove("currentTab")
         })
     }
+
     Array.from(h_menu).forEach((v, i)=>{
        v.onclick = () => {scroll(sections[i])}      
-
     })
 
     const p_container = document.querySelector(".projectContainer")
@@ -51,6 +51,7 @@ window.onload = () =>{
          sub:"마우스를 오버하시면 프로젝트 정보가 노출됩니다"}
     ]
 
+    //프로젝트 박스
     for(let i =0; i < projects.length; i++){
         const p_box = makeElement("div", "projectBox");
         const pTitle = makeElement("div", "pTitle");

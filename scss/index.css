@@ -193,7 +193,7 @@ section {
     width: 500px;
     margin: auto;
     text-align: center; }
-  .contactContainer .mail, .contactContainer .github {
+  .contactContainer .mail, .contactContainer .github, .contactContainer .reply_to {
     background-color: #d7edf2;
     border: 1px #5c7eac solid;
     width: 100%;

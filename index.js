@@ -1,8 +1,14 @@
-makeElement = (el, name)=>{
+makeElement = (el, name, text)=>{
+
     const element = document.createElement(el)
     element.className = name;
+    if(text != null){
+        const textNode = document.createTextNode(text);
+        element.append(text)
+    }
     return element;
 }
+
 
 window.onload = () =>{
     {
@@ -58,31 +64,32 @@ window.onload = () =>{
          subtitle:"포트폴리오 웹사이트",
          intro:"지금 보고 계신 이 페이지", 
          img:"img/p_portfolio.png",
-         skill:"", 
+         skill:"Spring", 
          github:"https://github.com/Tomas1876/Portfolio"},
          {title:"BIT_SECONDHANDS",
          subtitle:"중고거래 사이트",
          intro:"번개장터를 벤치마킹", 
          img:"img/p_secondhands.png",
-         skill:"", 
+         skill:"Spring", 
          github:"https://github.com/Tomas1876/BIT_SECONDHANDS"}
     ]
 
     //프로젝트 박스
     for(let i =0; i < projects.length; i++){
         const p_box = makeElement("div", "projectBox");
-        const pTitle = makeElement("div", "pTitle");
-        console.log(projects[i].title)
-        const title = document.createTextNode(projects[i].title);
-        pTitle.append(title)
-        const pIntro = makeElement("div", "pIntro");
-        const intro = document.createTextNode(projects[i].intro);
-        pIntro.append(intro)
+        const pTitle = makeElement("div", "pTitle", projects[i].title);
+
         const pImg = makeElement("div", "pImg");
         const img = makeElement("img", "projectImg");
         img.setAttribute("src",projects[i].img)
-        pImg.append(img);
-        p_box.append(pTitle, pIntro, pImg)
+        const infoBox = makeElement("div", "infoBox");
+        const pIntro = makeElement("div", "pIntro", projects[i].intro);
+        const skill = makeElement("div", "skill",projects[i].skill);
+        const github = makeElement("div", "githuburl", projects[i].github);
+        infoBox.append(pIntro, skill,github)
+        pImg.append(img, infoBox);
+
+        p_box.append(pTitle, pImg)
         p_container.appendChild(p_box)
     }
 

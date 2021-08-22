@@ -19,6 +19,7 @@ ul {
 header {
   position: sticky;
   box-sizing: border-box;
+  z-index: 999;
   top: 0;
   width: 100vw;
   /*헤더 반응형*/ }
@@ -155,13 +156,23 @@ section {
         height: 100%;
         overflow: hidden;
         border: 1px lightgray solid; }
-    .projectContainer .projectBox .pInfo {
-      width: 50%;
-      padding: 12px 24px; }
-    .projectContainer .projectBox a {
-      color: #291c16; }
+      .projectContainer .projectBox .pImg:hover img {
+        filter: brightness(40%);
+        -webkit-transition: all 0.4s ease-in;
+        transition: all 0.4s ease-in; }
+      .projectContainer .projectBox .pImg .infoBox {
+        position: relative;
+        top: -200px;
+        opacity: 0; }
+        .projectContainer .projectBox .pImg .infoBox:hover {
+          color: #f9f5ea;
+          z-index: 999;
+          opacity: 1;
+          -webkit-transition: all 0.4s ease-in;
+          transition: all 0.4s ease-in; }
     .projectContainer .projectBox .pTitle {
-      font-size: 24px; }
+      font-size: 24px;
+      padding-bottom: 10px; }
     .projectContainer .projectBox .sub {
       padding: 20px; }
 

@@ -95,6 +95,9 @@ section {
     text-align: center;
     padding: 50px 0;
     color: #88a4ca; }
+    section .sectionTitle .subText {
+      font-size: 16px;
+      font-weight: 500; }
   section .subBar {
     width: 100px;
     height: 5px;
@@ -150,7 +153,8 @@ section {
       .projectContainer .projectBox .pImg img {
         width: 100%;
         height: 100%;
-        overflow: hidden; }
+        overflow: hidden;
+        border: 1px lightgray solid; }
     .projectContainer .projectBox .pInfo {
       width: 50%;
       padding: 12px 24px; }
@@ -179,7 +183,7 @@ section {
     margin: auto;
     justify-content: center; }
     .skillContainer .skillWrap .skillBox {
-      width: 100px;
+      width: 120px;
       margin: 50px; }
 
 /*컨택트*/
@@ -254,4 +258,14 @@ section {
   .projectContainer, .skillContainer, .contactContainer {
     padding-top: 300px; }
   .homcontainer {
-    padding-top: 100px; } }
+    padding-top: 100px; }
+  .contactContainer .mail, .contactContainer .github, .contactContainer .reply_to {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px; }
+  .contactContainer .btn {
+    top: -62px;
+    left: 35%; }
+  .contactContainer #textarea {
+    width: 90%;
+    margin: auto; } }

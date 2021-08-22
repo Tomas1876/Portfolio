@@ -137,6 +137,10 @@ section{
         text-align: center;
         padding:50px 0;
         color: $blue;
+        .subText{
+            font-size:$font;
+            font-weight:500;
+        }
     }
     .subBar{
         width:100px;
@@ -182,7 +186,9 @@ section{
    }
    
    /*프로젝트*/
-   .projectContainer{
+.projectContainer{
+    width:100vw;
+
     &:before {
         content: '';
         width: 2px;
@@ -190,8 +196,9 @@ section{
         background: $darkblue;
         display: block;
         margin: 0 auto;
-      }
-       width:100vw;
+    }
+
+        
        .projectBox{
            width:80%;
            margin:auto;
@@ -199,10 +206,12 @@ section{
            .pImg{
                width:50%;
                margin: auto;
+               
                img{
                    width:100%;
                    height: 100%;
                    overflow:hidden;
+                   border: 1px lightgray solid;
                }
            }
            .pInfo{
@@ -244,12 +253,12 @@ section{
            margin: auto;
            justify-content:center;
            .skillBox{    
-               width:100px;
+               width:120px;
                margin:50px;
           }
        }
 
-   }
+}
 
 /*컨택트*/
 .contactContainer{
@@ -345,6 +354,25 @@ section{
     .homcontainer{
         padding-top:100px;
     }
+    .contactContainer{
+        .mail,.github,.reply_to{
+            width: 90%;
+            margin:auto;
+            margin-bottom: 10px;
+    
+        }
+        .btn{
+            top:-62px;
+            left:35%;
+        }
+        #textarea{
+            width: 90%;
+            margin:auto;
+            
+        }   
+
+    }
+    
     
     
 }

@@ -203,43 +203,45 @@ section{
        .projectBox{
            width:80%;
            margin:auto;
-           margin-bottom:50px;
-           .pImg{
-               width:50%;
-               margin: auto;
-               
-               img{
-                   width:100%;
-                   height: 100%;
-                   overflow:hidden;
-                   border: 1px lightgray solid;
-               }
-               &:hover img{
-                    filter: brightness(40%);
-                    -webkit-transition: all 0.4s ease-in;
-                    transition: all 0.4s ease-in;
-               }
-
-               .infoBox{
-                position:relative;
-                top:-200px;
-                opacity: 0;
-                    &:hover{
-                        color:$bgcolor;
-                        z-index: 999;
-                        opacity: 1;
-                        -webkit-transition: all 0.4s ease-in;
-                        transition: all 0.4s ease-in;
-                    }
-                }   
-           }      
+           margin-bottom:100px;      
            .pTitle{
                font-size: $title;
                padding-bottom:10px;
-               
+               color:$pink;
+               font-weight: 800;
            } 
            .sub{
                padding:20px;
+           }
+           .p_section{
+                /*display: flex;*/
+                .pImg{
+                    width:50%;
+                    margin: auto;
+                    
+                    img{
+                        width:100%;
+                        height: 100%;
+                        overflow:hidden;
+                        border: 1px lightgray solid;
+                    }
+                }
+                .infoBox{
+                    width:45%;
+                    margin: auto;
+                    text-align: left;
+                    padding-top:10px;
+                    .githuburl{
+                        a{
+                            text-decoration:none;
+                            color:$blue;
+    
+                        }
+
+                    }
+                    
+                }
+
            }
        }     
    }
@@ -364,6 +366,21 @@ section{
     }
     .homcontainer{
         padding-top:100px;
+    }
+    .projectContainer{
+        .p_section{
+            width:100%;
+            flex-direction: column;
+            align-items: flex-start;
+            .pImg{
+                width:100%;
+            }
+            .infoBox{
+                margin:auto;
+                word-break:break-all;
+            }
+
+        }
     }
     .contactContainer{
         .mail,.github,.reply_to{

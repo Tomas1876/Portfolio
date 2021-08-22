@@ -56,21 +56,27 @@ window.onload = () =>{
     const projects = [
         {title:"CYCODING",
          subtitle:"사이좋게 코딩하자",
-         intro:"참여하고 싶은 프로젝트 혹은 프로젝트를 함께 할 멤버를 찾아주는 사이트", 
+         intro:" 사이코딩이라는 사이트명은 '사이좋게 코딩한다'의 줄임말입니다."
+                +" 프로젝트를 함께 할 멤버를 구인하거나, 참여하고 싶은 프로젝트를 찾을 수 있도록"
+                +"멤버 등록과 프로젝트 게시글 등록을 할 수 있으며 입력한 정보를 바탕으로 알맞은"
+                +"프로젝트를 추천하는 기능을 제공합니다."
+                +" 팀 프로젝트로 회원가입과 로그인, 마이페이지와 웹소켓을 이용한 쪽지 보내기, 실시간 알림 기능을 담당했습니다.", 
          img:"img/p_cycoding02.png",
-         skill:"Spring", 
+         skill:"JavaScript, jQuery, Html, Css, Jsp, Spring, MyBatis, Oracle", 
          github:"https://github.com/DongGeun2/Spring_Final_Project"},
-         {title:"Portfolio Website",
+         {title:"PORTFOLIO",
          subtitle:"포트폴리오 웹사이트",
-         intro:"지금 보고 계신 이 페이지", 
+         intro:" 지금 보고 계신 이 페이지로 개인 포트폴리오 사이트입니다."
+                +" 순수 자바스크립트를 이용해 웹 페이지를 제작하는 것에 초점을 맞추었습니다.", 
          img:"img/p_portfolio.png",
-         skill:"Spring", 
+         skill:"JavaScript, Html, SCSS", 
          github:"https://github.com/Tomas1876/Portfolio"},
          {title:"BIT_SECONDHANDS",
          subtitle:"중고거래 사이트",
-         intro:"번개장터를 벤치마킹", 
+         intro:" 번개장터를 벤치마킹한 중고거래 쇼핑몰입니다. 상품 등록, 찜, 상점 댓글 기능 등을 제공합니다."
+            +" 팀 프로젝트로 메인 페이지와 상품 상세, 내 상품 관리 페이지를 담당했습니다.", 
          img:"img/p_secondhands.png",
-         skill:"Spring", 
+         skill:"JavaScript, jQuery, Html, Css, Jsp, Java, Oracle", 
          github:"https://github.com/Tomas1876/BIT_SECONDHANDS"}
     ]
 
@@ -81,15 +87,18 @@ window.onload = () =>{
 
         const pImg = makeElement("div", "pImg");
         const img = makeElement("img", "projectImg");
-        img.setAttribute("src",projects[i].img)
+        img.setAttribute("src",projects[i].img)     
+        pImg.append(img);
+
         const infoBox = makeElement("div", "infoBox");
         const pIntro = makeElement("div", "pIntro", projects[i].intro);
-        const skill = makeElement("div", "skill",projects[i].skill);
-        const github = makeElement("div", "githuburl", projects[i].github);
+        const skill = makeElement("div", "skill",`주요 기술 : ${projects[i].skill}`);
+        const github = makeElement("div", "githuburl");
+        github.innerHTML = `<a href=${projects[i].github}>Github : ${projects[i].github}</a>`
         infoBox.append(pIntro, skill,github)
-        pImg.append(img, infoBox);
-
-        p_box.append(pTitle, pImg)
+        const p_section = makeElement("div","p_section");
+        p_section.append(pImg, infoBox)
+        p_box.append(pTitle,p_section)
         p_container.appendChild(p_box)
     }
 

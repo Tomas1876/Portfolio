@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontawsome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!--email js-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <!--클립보드 자동 복사-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js"></script>
+    <!--구글폰트-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="scss/index.css">
@@ -36,7 +42,7 @@
                 <img src="img/logo01.png" alt="logo" />
             </div>
             <div class="mainTitle">
-                <p>안녕하세요<br />웹개발자 이가희입니다</p>
+                <p>Hello<br />I'm Kahee Lee, Developer</p>
             </div>
             <div class="down"><i class="fas fa-caret-down"></i></div>
         </section>
@@ -60,26 +66,39 @@
             </div>
         </section>
         <section class="contactContainer">
-            <div class="sectionTitle">CONTACT<div class="subBar"></div></div>
-            <form>
-                <!-- email Js가 값을 못 받음
-                <input type="text" name="from_name" placeholder="이름을 입력하세요" value="" />-->
-                <input type="text" class="reply_to" name="reply_to" placeholder="이메일을 입력하세요" />
+            <div class="sectionTitle">CONTACT
+                <div class="subBar"></div>           
+                <i class="fab fa-github"></i>
+                <i class="far fa-envelope"></i>
+            </div>
                 
-                <input class="mail" value="To. mnd3259@gmail.com" readonly>
-                <div id="textarea" contenteditable></div>
+            <form>
+                 
+                <div class="copyBox">
+                    <input class="github" value="https://github.com/Tomas1876" readonly>
+                    <button type="button" class="btn" id="copyGit" data-clipboard-target=".github">Copy</button>
+                </div>
+                <!--
+                <div class="copyBox">
+                    <input class="mail" value="mnd3259@gmail.com" readonly>
+                    <button type="button" class="btn" id="copyMail" data-clipboard-target=".mail">Copy</button>
+                </div>-->
+                <!--<input type="text" name="from_name" placeholder="이름을 입력하세요" value="" />-->
+                <input type="text" class="reply_to" name="reply_to" placeholder="이메일을 입력하세요" />                
+                <div id="textarea" contenteditable>내용을 입력하세요</div>
                 <input type="hidden" name="message" id="message">
                 
                 <!--<textarea name="message" placeholder="성함과 연락처, 내용을 입력하세요"></textarea>-->
-                <button type="submit" name="submit">submit</button>
+                <button type="submit" name="submit"id="submitBtn"><i class="fas fa-paper-plane"></i></button>
 
-                <input class="github" value="https://github.com/Tomas1876" readonly>
-                <button type="button" class="btn" data-clipboard-target=".github">Copy</button>
-            </form>
+            </form>            
+                
+                <div class="up"><i class="fas fa-caret-up"></i></div>
+
 
         </section>
-        <div class="up"><i class="fas fa-caret-up"></i></div>
+        
     </article>
-    
+   
 </body>
 </html>

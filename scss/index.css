@@ -2,7 +2,8 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif; }
 
 body {
   background-color: #f9f5ea; }
@@ -113,6 +114,9 @@ section {
     .homeContainer .logoBox img {
       width: 250px;
       height: 300px; }
+  .homeContainer .mainTitle {
+    font-size: 32px;
+    padding-top: 20px; }
   .homeContainer .down {
     animation: motion 0.7s linear 0s infinite alternate;
     margin-top: 100px; }
@@ -193,6 +197,20 @@ section {
     width: 500px;
     margin: auto;
     text-align: center; }
+    .contactContainer form #submitBtn {
+      width: 80px;
+      height: 30px;
+      margin: 15px 0;
+      background-color: #eb6366;
+      color: #f9f5ea;
+      outline: none;
+      border: none; }
+  .contactContainer .copyBox {
+    width: 100%;
+    height: 50px; }
+    .contactContainer .copyBox::after {
+      content: '';
+      margin-bottom: 20px; }
   .contactContainer .mail, .contactContainer .github, .contactContainer .reply_to {
     background-color: #d7edf2;
     border: 1px #5c7eac solid;
@@ -200,18 +218,37 @@ section {
     height: 30px;
     padding: 20px;
     margin-bottom: 10px;
-    outline: none; }
+    outline: none;
+    color: #291c16; }
+    .contactContainer .mail::placeholder, .contactContainer .github::placeholder, .contactContainer .reply_to::placeholder {
+      color: #291c16; }
+  .contactContainer .github, .contactContainer .mail {
+    border: 1px #eb6366 solid;
+    color: #5c7eac; }
+  .contactContainer .btn {
+    width: 50px;
+    height: 30px;
+    margin: 15px 0;
+    background-color: #d7edf2;
+    color: #eb6366;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -62px;
+    left: 210px; }
   .contactContainer #textarea {
     background-color: #d7edf2;
     border: 1px #5c7eac solid;
-    height: 300px;
+    height: 250px;
     outline: none;
     text-align: left;
-    padding: 50px; }
+    padding: 20px;
+    color: #291c16; }
 
 .up {
   text-align: center;
-  margin-top: 100px; }
+  color: #f9f5ea; }
 
 @media screen and (max-width: 768px) {
   .projectContainer, .skillContainer, .contactContainer {

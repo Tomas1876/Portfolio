@@ -58,14 +58,14 @@ window.onload = () =>{
          {title:"Portfolio Website",
          subtitle:"포트폴리오 웹사이트",
          intro:"지금 보고 계신 이 페이지", 
-         img:"img/p_cycoding.png",
+         img:"img/p_portfolio.png",
          skill:"", 
          github:"https://github.com/Tomas1876/Portfolio",
          sub:"마우스를 오버하시면 프로젝트 정보가 노출됩니다"},
          {title:"BIT_SECONDHANDS",
          subtitle:"중고거래 사이트",
          intro:"번개장터를 벤치마킹", 
-         img:"img/p_cycoding.png",
+         img:"img/p_secondhands.png",
          skill:"", 
          github:"https://github.com/Tomas1876/BIT_SECONDHANDS",
          sub:"마우스를 오버하시면 프로젝트 정보가 노출됩니다"}
@@ -109,22 +109,31 @@ window.onload = () =>{
     }
 
     //이메일, 깃허브 주소 자동 복사
-    let clipboard = new Clipboard('.btn');
+    let clipboard = new Clipboard('#copyGit');
     clipboard.on('success', function(e) {
         console.log(e);
     });
     clipboard.on('error', function(e) {
         console.log(e);
     });
-    write = (v)=> {
-        document.querySelector(".mail").value = v;
-    }
+
+    let clipboard2 = new Clipboard('#copyMail');
+    clipboard2.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard2.on('error', function(e) {
+        console.log(e);
+    });
+    //write = (v)=> {
+    //    document.querySelector(".github").value = v;
+    //}
 
     //contact 부분 이메일
     emailjs.init("user_7vUM1GIt3vDSx1wu7bqFu");
+    
+    
     document.querySelector('button[name=submit]').addEventListener('click',((e)=>{       	 
         e.preventDefault();
-
         let text = document.querySelector('#textarea').innerHTML;
         let message = document.querySelector('input[name=message]');
         message.value = text;
@@ -132,7 +141,7 @@ window.onload = () =>{
         let reply_to = document.querySelector('input[name=reply_to]');
         let templateParams = {	
         //각 요소는 emailJS에서 설정한 템플릿과 동일한 명으로 작성!
-           // name: from_name.value,
+           // from_name: from_name.value,
             reply_to : reply_to.value,
             message : message.value
         };       	
@@ -143,6 +152,12 @@ window.onload = () =>{
          	}, function(error) {
          	    console.log('FAILED...', error);
          	});
-      }));
+    }));
+
+    //이메일 전송 전, 내용 영역 클릭시 입력하세요 글자 사라지게 하기
+    document.querySelector("#textarea").addEventListener('click',(()=>{
+        document.querySelector('#textarea').innerHTML="";
+    }));
+
 }
 

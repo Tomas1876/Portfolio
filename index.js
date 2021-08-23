@@ -94,15 +94,16 @@ window.onload = () =>{
         const infoBox = makeElement("div", "infoBox");
         const pIntro = makeElement("div", "pIntro", projects[i].intro);
         const skill = makeElement("div", "skill",`주요 기술 : ${projects[i].skill}`);
-        const github = makeElement("div", "githuburl");
-        github.innerHTML = `<a href=${projects[i].github}>Github : ${projects[i].github}</a>`
-        infoBox.append(pIntro, skill);
+        const url = makeElement("div","url")
+        const github = makeElement("p", "githuburl");
+        github.innerHTML = `<a href=${projects[i].github} target="_blank">깃허브 방문하기</a>`
+        url.append(github)
         if(projects[i].link != null || projects[i].link != undefined ){
             const link = makeElement("p","link")
-            link.innerHTML = `<a href=${projects[i].link}>사이트 방문하기</a>`
-            infoBox.append(link)
+            link.innerHTML = `<a href=${projects[i].link} target="_blank">사이트 방문하기</a>`
+            url.append(link)
         }
-        infoBox.append(github)
+        infoBox.append(pIntro, skill,url);
         const p_section = makeElement("div","p_section")
         p_section.append(pImg, infoBox)
         p_box.append(pTitle,p_section)

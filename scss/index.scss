@@ -231,21 +231,26 @@ section{
                     margin: auto;
                     text-align: left;
                     padding-top:10px;
-                    .link{
-                        a{
-                            text-decoration:none;
-                            color:$pink;
-                        
+                    .url{
+                        display: flex;
+                        .link{
+                            a{
+                                text-decoration:none;
+                                color:$pink;
+                            }
                         }
-                    }
-                    .githuburl{
-                        a{
-                            text-decoration:none;
-                            color:$blue;
+                        .githuburl{
+                            margin-right:20px;
+                            a{
+                                text-decoration:none;
+                                color:$blue;
+        
+                            }
     
                         }
 
                     }
+                    
                     
                 }
 

@@ -170,12 +170,16 @@ section {
         margin: auto;
         text-align: left;
         padding-top: 10px; }
-        .projectContainer .projectBox .p_section .infoBox .link a {
-          text-decoration: none;
-          color: #eb6366; }
-        .projectContainer .projectBox .p_section .infoBox .githuburl a {
-          text-decoration: none;
-          color: #88a4ca; }
+        .projectContainer .projectBox .p_section .infoBox .url {
+          display: flex; }
+          .projectContainer .projectBox .p_section .infoBox .url .link a {
+            text-decoration: none;
+            color: #eb6366; }
+          .projectContainer .projectBox .p_section .infoBox .url .githuburl {
+            margin-right: 20px; }
+            .projectContainer .projectBox .p_section .infoBox .url .githuburl a {
+              text-decoration: none;
+              color: #88a4ca; }
 
 /*스킬*/
 .skillContainer {

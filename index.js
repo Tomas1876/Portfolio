@@ -123,6 +123,14 @@ window.onload = () =>{
     let clipboard = new Clipboard('#copyGit');
     clipboard.on('success', function(e) {
         console.log(e);
+        Swal.fire({
+            title: '깃허브 주소가 복사되었습니다',
+            text: '',
+            imageUrl: `${imgsrc}github.png`,
+            imageWidth: 300,
+            imageHeight: 300,
+            imageAlt: 'image',
+          })
     });
     clipboard.on('error', function(e) {
         console.log(e);
@@ -145,6 +153,7 @@ window.onload = () =>{
     
     document.querySelector('button[name=submit]').addEventListener('click',((e)=>{       	 
         e.preventDefault();
+        let from = document.querySelector(".reply_to").innerHTML;
         let text = document.querySelector('#textarea').innerHTML;
         let message = document.querySelector('input[name=message]');
         message.value = text;
@@ -160,6 +169,14 @@ window.onload = () =>{
         //emailjs.send('service ID', 'template ID', 보낼 내용이 담긴 객체)
          	.then(function(response) {
          	    console.log('SUCCESS!', response.status, response.text);
+                 Swal.fire({
+                    title: '감사합니다!',
+                    text: '메일이 전송되었습니다',
+                    imageUrl: `${imgsrc}mail.png`,
+                    imageWidth: 300,
+                    imageHeight: 300,
+                    imageAlt: 'image',
+                  })
          	}, function(error) {
          	    console.log('FAILED...', error);
          	});

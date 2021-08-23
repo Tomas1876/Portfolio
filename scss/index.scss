@@ -392,16 +392,24 @@ section{
     .contactContainer{
         form{
             width:100%;
-            .mail,.github,.reply_to{
+            .copyBox{
+                .github{
+                    width: 90%;
+                    margin:auto;
+                    margin-bottom: 10px;
+                }
+                .btn{
+                    top:-62px;
+                    left:35%;
+                }
+            }
+            .mail,.reply_to{
                 width: 90%;
                 margin:auto;
                 margin-bottom: 10px;
         
             }
-            .btn{
-                top:-62px;
-                left:35%;
-            }
+            
             #textarea{
                 width: 90%;
                 margin:auto;

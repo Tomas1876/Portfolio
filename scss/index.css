@@ -268,22 +268,27 @@ section {
     padding-top: 300px; }
   .homcontainer {
     padding-top: 100px; }
-  .projectContainer .p_section {
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start; }
-    .projectContainer .p_section .pImg {
-      width: 100%; }
-    .projectContainer .p_section .infoBox {
+  .projectContainer .projectBox {
+    width: 80%; }
+    .projectContainer .projectBox .p_section {
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start; }
+      .projectContainer .projectBox .p_section .pImg {
+        width: 100%; }
+      .projectContainer .projectBox .p_section .infoBox {
+        width: 100%;
+        margin: auto;
+        word-break: break-all; }
+  .contactContainer form {
+    width: 100%; }
+    .contactContainer form .mail, .contactContainer form .github, .contactContainer form .reply_to {
+      width: 90%;
       margin: auto;
-      word-break: break-all; }
-  .contactContainer .mail, .contactContainer .github, .contactContainer .reply_to {
-    width: 90%;
-    margin: auto;
-    margin-bottom: 10px; }
-  .contactContainer .btn {
-    top: -62px;
-    left: 35%; }
-  .contactContainer #textarea {
-    width: 90%;
-    margin: auto; } }
+      margin-bottom: 10px; }
+    .contactContainer form .btn {
+      top: -62px;
+      left: 35%; }
+    .contactContainer form #textarea {
+      width: 90%;
+      margin: auto; } }

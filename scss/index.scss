@@ -368,36 +368,48 @@ section{
         padding-top:100px;
     }
     .projectContainer{
-        .p_section{
-            width:100%;
-            flex-direction: column;
-            align-items: flex-start;
-            .pImg{
+        .projectBox{
+            width: 80%;
+            .p_section{
                 width:100%;
-            }
-            .infoBox{
-                margin:auto;
-                word-break:break-all;
+                flex-direction: column;
+                align-items: flex-start;
+                .pImg{
+                    width:100%;
+                }
+                .infoBox{
+                    width:100%;
+                    margin:auto;
+                    word-break:break-all;
+                    
+                }
+    
             }
 
         }
+        
     }
     .contactContainer{
-        .mail,.github,.reply_to{
-            width: 90%;
-            margin:auto;
-            margin-bottom: 10px;
-    
+        form{
+            width:100%;
+            .mail,.github,.reply_to{
+                width: 90%;
+                margin:auto;
+                margin-bottom: 10px;
+        
+            }
+            .btn{
+                top:-62px;
+                left:35%;
+            }
+            #textarea{
+                width: 90%;
+                margin:auto;
+                
+            }   
+
         }
-        .btn{
-            top:-62px;
-            left:35%;
-        }
-        #textarea{
-            width: 90%;
-            margin:auto;
-            
-        }   
+        
 
     }
     

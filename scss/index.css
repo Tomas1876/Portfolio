@@ -170,6 +170,9 @@ section {
         margin: auto;
         text-align: left;
         padding-top: 10px; }
+        .projectContainer .projectBox .p_section .infoBox .link a {
+          text-decoration: none;
+          color: #eb6366; }
         .projectContainer .projectBox .p_section .infoBox .githuburl a {
           text-decoration: none;
           color: #88a4ca; }
@@ -282,13 +285,17 @@ section {
         word-break: break-all; }
   .contactContainer form {
     width: 100%; }
-    .contactContainer form .mail, .contactContainer form .github, .contactContainer form .reply_to {
+    .contactContainer form .copyBox .github {
       width: 90%;
       margin: auto;
       margin-bottom: 10px; }
-    .contactContainer form .btn {
+    .contactContainer form .copyBox .btn {
       top: -62px;
       left: 35%; }
+    .contactContainer form .mail, .contactContainer form .reply_to {
+      width: 90%;
+      margin: auto;
+      margin-bottom: 10px; }
     .contactContainer form #textarea {
       width: 90%;
       margin: auto; } }

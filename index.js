@@ -63,7 +63,8 @@ window.onload = () =>{
                 +" 팀 프로젝트로 회원가입과 로그인, 마이페이지와 웹소켓을 이용한 쪽지 보내기, 실시간 알림 기능을 담당했습니다.", 
          img:"img/p_cycoding02.png",
          skill:"JavaScript, jQuery, Html, Css, Jsp, Spring, MyBatis, Oracle", 
-         github:"https://github.com/DongGeun2/Spring_Final_Project"},
+         github:"https://github.com/DongGeun2/Spring_Final_Project",
+         link:"http://3.36.159.228:8090/Cycoding/"},
          {title:"PORTFOLIO",
          subtitle:"포트폴리오 웹사이트",
          intro:" 지금 보고 계신 이 페이지로 개인 포트폴리오 사이트입니다."
@@ -95,8 +96,14 @@ window.onload = () =>{
         const skill = makeElement("div", "skill",`주요 기술 : ${projects[i].skill}`);
         const github = makeElement("div", "githuburl");
         github.innerHTML = `<a href=${projects[i].github}>Github : ${projects[i].github}</a>`
-        infoBox.append(pIntro, skill,github)
-        const p_section = makeElement("div","p_section");
+        infoBox.append(pIntro, skill);
+        if(projects[i].link != null || projects[i].link != undefined ){
+            const link = makeElement("p","link")
+            link.innerHTML = `<a href=${projects[i].link}>사이트 방문하기</a>`
+            infoBox.append(link)
+        }
+        infoBox.append(github)
+        const p_section = makeElement("div","p_section")
         p_section.append(pImg, infoBox)
         p_box.append(pTitle,p_section)
         p_container.appendChild(p_box)

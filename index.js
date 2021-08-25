@@ -64,7 +64,7 @@ window.onload = () =>{
          img:"img/p_cycoding02.png",
          skill:"JavaScript, jQuery, Html, Css, Jsp, Spring, MyBatis, Oracle", 
          github:"https://github.com/DongGeun2/Spring_Final_Project",
-         link:"http://3.36.159.228:8090/Cycoding/"},
+         //link:"http://3.36.159.228:8090/Cycoding/"},
          {title:"PORTFOLIO",
          subtitle:"포트폴리오 웹사이트",
          intro:" 지금 보고 계신 이 페이지로 개인 포트폴리오 사이트입니다."

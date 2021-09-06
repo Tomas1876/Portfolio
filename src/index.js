@@ -53,7 +53,7 @@ window.onload = () =>{
 }
     const p_container = document.querySelector(".projectContainer")
     function loadItems(){
-        return fetch('../data/data.json')
+        return fetch('data/data.json')
         .then(response => response.json())
         .then(json => json)
     }

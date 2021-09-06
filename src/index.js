@@ -28,10 +28,6 @@ window.onload = () =>{
     scroll=(s)=>{
         s.scrollIntoView({behavior: "smooth"})
         const target = event.target
-        const h_menu = document.getElementsByClassName("headerMenu")
-        Array.from(h_menu).forEach((v)=>{
-            v == target? v.classList.add("currentTab") : v.classList.remove("currentTab")
-        })
     }
 
     //반응형 헤더 메뉴
@@ -52,7 +48,7 @@ window.onload = () =>{
     })
 }
     const p_container = document.querySelector(".projectContainer")
-    function loadItems(){
+    loadItems=()=>{
         return fetch('data/data.json')
         .then(response => response.json())
         .then(json => json)
@@ -60,8 +56,7 @@ window.onload = () =>{
     loadItems()
     .then(json=>{
         showProjectInfo(json.projects);
-        showSkills(json.skills)
-        console.log(json.projects)
+        showSkills(json.skills);
     })
     .catch(console.log)
 
@@ -96,7 +91,7 @@ window.onload = () =>{
         }
 
     }
- 
+    //스킬 박스
     showSkills=(skills)=>{
         for(let i =0; i<skills.length; i++){
             const skillWrap = document.querySelector(".skillWrap");

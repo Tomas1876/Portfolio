@@ -1,439 +1,427 @@
-#root{
-
-    $bgcolor:#f9f5ea !global;
-    $lightblue:#d7edf2 !global;
-    $blue:#88a4ca !global;
-    $darkblue:#5c7eac !global;
-    $pink:#eb6366 !global;
-    $fontcolor:#291c16 !global;
-    $aroundpadding: 12px 24px !global;
-    $sidepadding: 12px !global;
-    $title:24px !global;
-    $font:16px !global;
-    $f-family:'Noto Sans KR', sans-serif !global;
-    $section-top:77px;
+#root {
+  $bgcolor: #f9f5ea !global;
+  $lightblue: #d7edf2 !global;
+  $blue: #88a4ca !global;
+  $darkblue: #5c7eac !global;
+  $pink: #eb6366 !global;
+  $fontcolor: #291c16 !global;
+  $aroundpadding: 12px 24px !global;
+  $sidepadding: 12px !global;
+  $title: 24px !global;
+  $font: 16px !global;
+  $f-family: 'Noto Sans KR', sans-serif !global;
+  $section-top: 77px;
 }
 
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    font-family: $f-family;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $f-family;
 }
-body{
-    background-color: $bgcolor;
+body {
+  background-color: $bgcolor;
 }
 body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+  display: none; /* Chrome, Safari, Opera*/
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 /*헤더*/
-header{
-    position:sticky;
+header {
+  position: sticky;
+  box-sizing: border-box;
+  z-index: 999;
+  top: 0;
+  width: 100vw;
+  nav {
+    width: 100%;
+
+    background-color: $fontcolor;
+    display: flex;
+    align-items: center;
+    color: $bgcolor;
     box-sizing: border-box;
-    z-index: 999;
-    top:0;
-    width:100vw;
-    nav{
-        width:100%;
+    .logo {
+      padding: $aroundpadding;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
 
-        background-color: $fontcolor;
-        display:flex;
-        align-items: center;
-        color:$bgcolor;
-        box-sizing: border-box;
-        .logo{
-            padding:$aroundpadding;
-            img{
-                width: 40px;
-                height:40px;
-            }
+    button {
+      background-color: $fontcolor;
+      color: $bgcolor;
+    }
 
+    .navUl {
+      margin-left: auto;
+      height: 100%;
+      display: flex;
+      box-sizing: border-box;
+
+      li {
+        height: 100%;
+        vertical-align: middle;
+        padding: 23px $sidepadding;
+        cursor: pointer;
+        .menuLine {
+          width: 40px;
+          height: 3px;
+          background-color: $fontcolor;
+          margin: auto;
         }
-
-        button{
-            background-color: $fontcolor;
-            color:$bgcolor;
+        &:hover {
+          .menuLine {
+            background-color: $bgcolor;
+          }
         }
-    
-        .navUl{
-            margin-left:auto;
-            height: 100%;
-            display:flex;
-            box-sizing: border-box;
-            
-            li{
-                height: 100%;
-                vertical-align: middle;
-                padding: 23px $sidepadding;              
-                .menuLine{
-                    width:40px;
-                    height:3px;
-                    background-color: $fontcolor;
-                    margin:auto;
-                }
+        /*
                 .currentMenu{
                     background-color: $bgcolor;
-                }
-            }
+                }*/
+      }
+      /*
             .currentTab{
                 background-color: $bgcolor;
                 color:$fontcolor;
                 box-sizing: border-box;
                 font-weight: 700;
             }
-        }
-        .space{
-            width:50px
-        }
-        .toggleBtn{
-            position:absolute;
-            top:22px;
-            right:32px;
-            font-size:$title;
-            color:$bgcolor;
-            display: none;
-        }
+            */
     }
-    /*헤더 반응형*/
-    @media screen and (max-width:768px){
-        nav{
-            flex-direction: column;
-            padding:8px 24px;
-            align-items: flex-start;
+    .space {
+      width: 50px;
+    }
+    .toggleBtn {
+      position: absolute;
+      top: 22px;
+      right: 32px;
+      font-size: $title;
+      color: $bgcolor;
+      display: none;
+    }
+  }
+  /*헤더 반응형*/
+  @media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      padding: 8px 24px;
+      align-items: flex-start;
 
-            .navUl{
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                width:100%;
-                
-                li{
-                    width:100%;
-                    text-align: center;
-                }
-            }
-            .navUl.active{
-                display:flex;
-            }
-            .toggleBtn{
-                display: block;
-            }
+      .navUl {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        li {
+          width: 100%;
+          text-align: center;
         }
+      }
+      .navUl.active {
+        display: flex;
+      }
+      .toggleBtn {
+        display: block;
+      }
     }
+  }
 }
-
 
 /*본문 시작*/
-section{
-    padding-top:77px;
-    .sectionTitle{
-        font-size:36px;
-        font-weight:600;
-        letter-spacing: 1px;
-        text-align: center;
-        padding:50px 0;
-        color: $blue;
-        .subText{
-            font-size:$font;
-            font-weight:500;
-        }
+section {
+  padding-top: 77px;
+  .sectionTitle {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 50px 0;
+    color: $blue;
+    .subText {
+      font-size: $font;
+      font-weight: 500;
     }
-    .subBar{
-        width:100px;
-        height:5px;
-        background-color: $blue;
-        margin:auto;
-    }
+  }
+  .subBar {
+    width: 100px;
+    height: 5px;
+    background-color: $blue;
+    margin: auto;
+  }
 
-    &>div{
-      text-align: center;  
-    }
-    
+  & > div {
+    text-align: center;
+  }
 }
-    /*홈*/
-    .homeContainer{
-        height:100vh;
-       text-align: center;
-       color:$fontcolor;
-       font-size:30px;
-       .logoBox{
-           margin-top: 150px;
-           img{
-               width:250px;
-               height: 300px;
-           }
-       }
-       .mainTitle{
-           font-size: $font*2;
-           padding-top:20px;
-       }
-       .down{
-           animation: motion 0.7s linear 0s infinite alternate;
-           margin-top: 100px;
-           img{
-               width:50px;
-               height:70px;
-           }
-       }
-       @keyframes motion {
-           0% {margin-top: 100px;}
-           100% {margin-top: 115px;}
-       }
-   }
-   
-   /*프로젝트*/
-.projectContainer{
-    width:100vw;
-
-    &:before {
-        content: '';
-        width: 2px;
-        height: 100px;
-        background: $darkblue;
-        display: block;
-        margin: 0 auto;
+/*홈*/
+.homeContainer {
+  height: 100vh;
+  text-align: center;
+  color: $fontcolor;
+  font-size: 30px;
+  .logoBox {
+    margin-top: 150px;
+    img {
+      width: 250px;
+      height: 300px;
     }
+  }
+  .mainTitle {
+    font-size: $font * 2;
+    padding-top: 20px;
+  }
+  .down {
+    animation: motion 0.7s linear 0s infinite alternate;
+    margin-top: 100px;
+    img {
+      width: 50px;
+      height: 70px;
+    }
+  }
+  @keyframes motion {
+    0% {
+      margin-top: 100px;
+    }
+    100% {
+      margin-top: 115px;
+    }
+  }
+}
 
-        
-       .projectBox{
-           width:80%;
-           margin:auto;
-           margin-bottom:100px;      
-           .pTitle{
-               font-size: $title;
-               padding-bottom:10px;
-               color:$pink;
-               font-weight: 800;
-           } 
-           .sub{
-               padding:20px;
-           }
-           .p_section{
-                /*display: flex;*/
-                .pImg{
-                    width:50%;
-                    margin: auto;
-                    
-                    img{
-                        width:100%;
-                        height: 100%;
-                        overflow:hidden;
-                        border: 1px lightgray solid;
-                    }
-                }
-                .infoBox{
-                    width:45%;
-                    margin: auto;
-                    text-align: left;
-                    padding-top:10px;
-                    .url{
-                        display: flex;
-                        .link{
-                            a{
-                                text-decoration:none;
-                                color:$pink;
-                            }
-                        }
-                        .githuburl{
-                            margin-right:20px;
-                            a{
-                                text-decoration:none;
-                                color:$blue;
-        
-                            }
-    
-                        }
+/*프로젝트*/
+.projectContainer {
+  width: 100vw;
 
-                    }
-                    
-                    
-                }
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: $darkblue;
+    display: block;
+    margin: 0 auto;
+  }
 
-           }
-       }     
-   }
-   
-   /*스킬*/
-   .skillContainer{    
-       width:100vw;
-       /*height:100vh;*/
-       &:before {
-        content: '';
-        width: 2px;
-        height: 100px;
-        background: $darkblue;
-        display: block;
-        margin: 0 auto;
+  .projectBox {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+    .pTitle {
+      font-size: $title;
+      padding-bottom: 10px;
+      color: $pink;
+      font-weight: 800;
+    }
+    .sub {
+      padding: 20px;
+    }
+    .p_section {
+      /*display: flex;*/
+      .pImg {
+        width: 50%;
+        margin: auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          border: 1px lightgray solid;
+        }
       }
-   
-       .skillWrap{
-           display: flex;
-           flex-wrap: wrap;
-           width:60%;
-           margin: auto;
-           justify-content:center;
-           .skillBox{    
-               width:120px;
-               margin:50px;
+      .infoBox {
+        width: 45%;
+        margin: auto;
+        text-align: left;
+        padding-top: 10px;
+        .url {
+          display: flex;
+          .link {
+            a {
+              text-decoration: none;
+              color: $pink;
+            }
           }
-       }
+          .githuburl {
+            margin-right: 20px;
+            a {
+              text-decoration: none;
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
+/*스킬*/
+.skillContainer {
+  width: 100vw;
+  /*height:100vh;*/
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: $darkblue;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skillWrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    justify-content: center;
+    .skillBox {
+      width: 120px;
+      margin: 50px;
+    }
+  }
 }
 
 /*컨택트*/
-.contactContainer{
-    width:100vw;
-    height:100vh;
-    &:before {
-        content: '';
-        width: 2px;
-        height: 100px;
-        background: $darkblue;
-        display: block;
-        margin: 0 auto;
-      }
+.contactContainer {
+  width: 100vw;
+  height: 100vh;
+  &:before {
+    content: '';
+    width: 2px;
+    height: 100px;
+    background: $darkblue;
+    display: block;
+    margin: 0 auto;
+  }
 
-      form{
-        width:500px;
-        margin:auto;
-        text-align: center;
+  form {
+    width: 500px;
+    margin: auto;
+    text-align: center;
 
-        #submitBtn{
-            width:80px;
-            height:30px;
-            margin: 15px 0;
-            background-color: $pink;
-            color: $bgcolor;
-            outline: none;
-            border: none;
+    #submitBtn {
+      width: 80px;
+      height: 30px;
+      margin: 15px 0;
+      background-color: $pink;
+      color: $bgcolor;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+  .copyBox {
+    width: 100%;
+    height: 50px;
+    &::after {
+      content: '';
+      margin-bottom: 20px;
+    }
+  }
+  .mail,
+  .github,
+  .reply_to {
+    background-color: $lightblue;
+    border: 1px $darkblue solid;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    color: $fontcolor;
+    &::placeholder {
+      color: $fontcolor;
+    }
+  }
+
+  .github,
+  .mail {
+    border: 1px $pink solid;
+    color: $darkblue;
+  }
+  .btn {
+    width: 50px;
+    height: 30px;
+    margin: 15px 0;
+    background-color: $lightblue;
+    color: $pink;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -62px;
+    left: 210px;
+    cursor: pointer;
+  }
+
+  #textarea {
+    background-color: $lightblue;
+    border: 1px $darkblue solid;
+    height: 250px;
+    outline: none;
+    text-align: left;
+    padding: 20px;
+    color: $fontcolor;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectContainer,
+  .skillContainer,
+  .contactContainer {
+    padding-top: 300px;
+  }
+  .homcontainer {
+    padding-top: 100px;
+  }
+  .projectContainer {
+    .projectBox {
+      width: 80%;
+      .p_section {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        .pImg {
+          width: 100%;
+        }
+        .infoBox {
+          width: 100%;
+          margin: auto;
+          word-break: break-all;
         }
       }
-      .copyBox{
-        width: 100%;
-        height: 50px;
-        &::after{
-            content:'';
-            margin-bottom: 20px;
+    }
+  }
+  .contactContainer {
+    form {
+      width: 100%;
+      .copyBox {
+        .github {
+          width: 90%;
+          margin: auto;
+          margin-bottom: 10px;
+        }
+        .btn {
+          top: -62px;
+          left: 35%;
         }
       }
-    .mail,.github,.reply_to{
-        background-color: $lightblue;
-        border: 1px $darkblue solid;
-        width: 100%;
-        height: 30px;
-        padding:20px;
+      .mail,
+      .reply_to {
+        width: 90%;
+        margin: auto;
         margin-bottom: 10px;
-        outline: none;
-        color: $fontcolor;
-        &::placeholder{
-            color:$fontcolor;
-        }
-    }
+      }
 
-    .github, .mail{
-        border: 1px $pink solid;
-        color:$darkblue;
+      #textarea {
+        width: 90%;
+        margin: auto;
+      }
     }
-    .btn{
-        width:50px;
-        height:30px;
-        margin: 15px 0;
-        background-color: $lightblue;
-        color: $pink;
-        font-weight: 700;
-        outline: none;
-        border: none;
-        position:relative;
-        top: -62px;
-        left:210px
-
-    }
-
-    #textarea{
-        background-color: $lightblue;
-        border: 1px $darkblue solid;
-        height: 250px;
-        outline: none;
-        text-align: left;
-        padding:20px;
-        color:$fontcolor;
-        
-    }
-   
+  }
 }
-.up{
-    text-align: center; 
-    color:$bgcolor;
-}
-
-
-@media screen and (max-width:768px){
-    .projectContainer, .skillContainer, .contactContainer{
-        padding-top:300px;
-    }
-    .homcontainer{
-        padding-top:100px;
-    }
-    .projectContainer{
-        .projectBox{
-            width: 80%;
-            .p_section{
-                width:100%;
-                flex-direction: column;
-                align-items: flex-start;
-                .pImg{
-                    width:100%;
-                }
-                .infoBox{
-                    width:100%;
-                    margin:auto;
-                    word-break:break-all;
-                    
-                }
-    
-            }
-
-        }
-        
-    }
-    .contactContainer{
-        form{
-            width:100%;
-            .copyBox{
-                .github{
-                    width: 90%;
-                    margin:auto;
-                    margin-bottom: 10px;
-                }
-                .btn{
-                    top:-62px;
-                    left:35%;
-                }
-            }
-            .mail,.reply_to{
-                width: 90%;
-                margin:auto;
-                margin-bottom: 10px;
-        
-            }
-            
-            #textarea{
-                width: 90%;
-                margin:auto;
-                
-            }   
-
-        }
-        
-
-    }
-    
-    
-    
-}
-

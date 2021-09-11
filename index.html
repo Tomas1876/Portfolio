@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,12 +18,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    
+
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script defer src="src/index.js"></script>
     <link rel="stylesheet" href="scss/index.css">
     <title>이가희의 포트폴리오</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -30,7 +32,10 @@
                 <img src="img/logo02.png" alt="logo" />
             </div>
             <ul class="navUl">
-           
+                <li class="headerMenu">HOME<div class="menuLine"></div></li>
+                <li class="headerMenu">PROJECT<div class="menuLine"></div></li>
+                <li class="headerMenu">SKILL<div class="menuLine"></div></li>
+                <li class="headerMenu">CONTACT<div class="menuLine"></div></li>
             </ul>
             <div class="space"></div>
             <div class="toggleBtn">
@@ -50,55 +55,49 @@
         </section>
 
         <section class="projectContainer">
-            <div class="sectionTitle">PROJECT                
+            <div class="sectionTitle">PROJECT
                 <div class="subBar"></div>
-               <!--<span class="subText">마우스를 오버하시면 프로젝트 정보가 노출됩니다</span>-->
             </div>
+            <div class="projectWrap"></div>
         </section>
 
         <section class="skillContainer">
-            <div class="sectionTitle">SKILL<div class="subBar"></div></div>
-            
-            <div class="skillWrap"> 
+            <div class="sectionTitle">SKILL<div class="subBar"></div>
+            </div>
+
+            <div class="skillWrap">
                 <div class="front">
 
                 </div>
                 <div class="back">
-                    
-                </div> 
+
+                </div>
             </div>
         </section>
         <section class="contactContainer">
             <div class="sectionTitle">CONTACT
-                <div class="subBar"></div>           
+                <div class="subBar"></div>
                 <i class="fab fa-github"></i>
                 <i class="far fa-envelope"></i>
             </div>
-                
+
             <form>
-                 
+
                 <div class="copyBox">
                     <input class="github" value="https://github.com/Tomas1876" readonly>
                     <button type="button" class="btn" id="copyGit" data-clipboard-target=".github">Copy</button>
                 </div>
-                <!--
-                <div class="copyBox">
-                    <input class="mail" value="mnd3259@gmail.com" readonly>
-                    <button type="button" class="btn" id="copyMail" data-clipboard-target=".mail">Copy</button>
-                </div>-->
-                <!--<input type="text" name="from_name" placeholder="이름을 입력하세요" value="" />-->
-                <input type="text" class="reply_to" name="reply_to" placeholder="이메일을 입력하세요" />                
+                <input type="text" class="reply_to" name="reply_to" placeholder="이메일을 입력하세요" />
                 <div id="textarea" contenteditable>내용을 입력하세요</div>
                 <input type="hidden" name="message" id="message">
-                
-                <!--<textarea name="message" placeholder="성함과 연락처, 내용을 입력하세요"></textarea>-->
-                <button type="submit" name="submit"id="submitBtn"><i class="fas fa-paper-plane"></i></button>
+                <button type="submit" name="submit" id="submitBtn"><i class="fas fa-paper-plane"></i></button>
 
-            </form>            
-                
+            </form>
+
         </section>
-        
+
     </article>
-   
+
 </body>
+
 </html>

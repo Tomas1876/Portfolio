@@ -152,40 +152,40 @@ section {
     background: #5c7eac;
     display: block;
     margin: 0 auto; }
-  .projectContainer .projectBox {
+  .projectContainer .projectWrap .projectBox {
     width: 80%;
     margin: auto;
     margin-bottom: 100px; }
-    .projectContainer .projectBox .pTitle {
+    .projectContainer .projectWrap .projectBox .pTitle {
       font-size: 24px;
       padding-bottom: 10px;
       color: #eb6366;
       font-weight: 800; }
-    .projectContainer .projectBox .sub {
+    .projectContainer .projectWrap .projectBox .sub {
       padding: 20px; }
-    .projectContainer .projectBox .p_section {
+    .projectContainer .projectWrap .projectBox .p_section {
       /*display: flex;*/ }
-      .projectContainer .projectBox .p_section .pImg {
+      .projectContainer .projectWrap .projectBox .p_section .pImg {
         width: 50%;
         margin: auto; }
-        .projectContainer .projectBox .p_section .pImg img {
+        .projectContainer .projectWrap .projectBox .p_section .pImg img {
           width: 100%;
           height: 100%;
           overflow: hidden;
           border: 1px lightgray solid; }
-      .projectContainer .projectBox .p_section .infoBox {
+      .projectContainer .projectWrap .projectBox .p_section .infoBox {
         width: 45%;
         margin: auto;
         text-align: left;
         padding-top: 10px; }
-        .projectContainer .projectBox .p_section .infoBox .url {
+        .projectContainer .projectWrap .projectBox .p_section .infoBox .url {
           display: flex; }
-          .projectContainer .projectBox .p_section .infoBox .url .link a {
+          .projectContainer .projectWrap .projectBox .p_section .infoBox .url .link a {
             text-decoration: none;
             color: #eb6366; }
-          .projectContainer .projectBox .p_section .infoBox .url .githuburl {
+          .projectContainer .projectWrap .projectBox .p_section .infoBox .url .githuburl {
             margin-right: 20px; }
-            .projectContainer .projectBox .p_section .infoBox .url .githuburl a {
+            .projectContainer .projectWrap .projectBox .p_section .infoBox .url .githuburl a {
               text-decoration: none;
               color: #88a4ca; }
 

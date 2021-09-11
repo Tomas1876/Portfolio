@@ -25,7 +25,7 @@ Library - EmailJS
 <br>
 <br>
 
-#### auto copy<br>
+### auto copy<br>
 
 copy 버튼 클릭시 자동으로 깃허브 주소가 복사됩니다.
 ![copy](https://user-images.githubusercontent.com/78326967/132953845-9e1a2c77-68fc-4916-83ba-e5be4c94cfcd.gif)

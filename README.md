@@ -3,6 +3,11 @@
 <img width="1280" alt="p_portfolio" src="https://user-images.githubusercontent.com/78326967/130376976-fb1e334c-6d8a-46a2-9af5-dddc5a09e764.png">
 <br>
 <br>
+
+[포트폴리오 바로가기](https://tomas1876.github.io/Portfolio/)
+
+<br>
+<br>
 개인적으로 제작한 포트폴리오 사이트입니다.<br>
 헤더와 본문은 모바일 버전도 고려한 반응형으로 제작되었습니다.<br>
 <br>
